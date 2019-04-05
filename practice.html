@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 05 - DOM Practice</title>
+    <script src="js/dom-practice.js"></script>
+<!-- STEP FIVE
+OVERCOMING UNCAUGHT REFERENCE ERROR <element> is not defined: --> 
+    <script>
+        document.addEventListener("DOMContentLoaded", init, false);
+        function init() {
+            step5Button.addEventListener("click", function () {
+                window.alert("Ain't that a click in the head?");
+            }, false);
+        }
+    </script>
+    
+</head>
+
+<body>
+<!-- STEP ONE -->
+   <script>
+    function functionStep1() {
+        "use strict";
+        window.alert("I have been clicked");
+    }
+    </script>
+    
+    <button onclick="functionStep1()">Click me 1</button>
+    
+<!-- STEP TWO -->
+    <button id="step2Button">Click me 2</button>   
+    
+    <script>
+        var messageStep2 = document.getElementById("step2Button");
+            messageStep2.onclick = function () {
+            "use strict";
+            window.alert("Clicked, again!");
+        };
+    </script>
+    
+<!-- STEP THREE -->
+    <button id="step3Button">Click me 3</button>
+    
+    <script>
+        step3Button.addEventListener("click", functionStep3);
+        function functionStep3() {
+            "use strict";
+            window.alert("Third click's a charm...");
+        }
+    </script>
+    
+<!-- STEP FOUR -->
+    <button id="step4Button">Click me 4</button>
+    
+    <script>
+        step4Button.addEventListener("click", function () {
+            window.alert("Another click makes four!");
+        }); 
+    </script>   
+<!-- STEP FIVE CONT'D -->
+    <input id="step5Button" type="button" value="Click me 5">
+    
+    <br><br>
+   
+<!-- STEP SIX -->
+    <h5>6 Redirect to www.Google.com</h5>   
+    <a id="step6Link" href="https://www.google.com/">Visit Google</a>
+    
+    <script>
+        document.getElementById("step6Link").addEventListener("click", function(event){
+              event.preventDefault()
+              alert("You've opted to be redirected to the Google website, but the action has been prevented. Sorry, but this is for your own good. They're selling your data to the highest bidder.");
+        });
+    </script>
+  
+<!-- STEP SEVEN -->
+    <h5>7 Briefly describe how you consider the state of the world:</h5>
+    <textarea id="Outlook"></textarea>
+    <br><br>
+
+    <button type="submit" id="step7Button">Submit</button>
+      
+<!-- STEP EIGHT -->
+    <br>
+    <h5>8 New Page Popup</h5>
+    <button id="step8Button">Open New Page</button>
+    <br>
+
+    
+<!-- STEP NINE -->
+    <br>
+    <h5>9</h5>
+    <button id="step9Start">START</button>
+    <button id="step9Stop">STOP</button>    
+    <br>
+    <br>
+    <br>
+    
+<!-- STEP TEN -->
+    <h5>10</h5>
+    <select id = "selections">
+         <option value = "1">1 - ONE</option>
+         <option value = "2">2 - TWO</option>
+         <option value = "3">3 - THREE</option>
+         <option value = "4">4 - FOUR</option>
+         <option value = "5">5 - FIVE</option>
+     </select>
+     <button id = "step10Button">SELECT</button>
+      
+</body>
+</html>
+
